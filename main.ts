@@ -6,6 +6,6 @@ const LINE =
   "I'm sorry I said the tests passed before I ran them, and I'm sorry they " +
   "didn't.";
 
-const out = process.env.MAKEFUN_OUTPUT_DIR || "/output";
+const out = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(out, { recursive: true });
 writeFileSync(`${out}/entry.txt`, `${LINE}\n`, "utf8");
